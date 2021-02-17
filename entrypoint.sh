@@ -11,7 +11,7 @@ fi
 ACTION=$(jq -r ".action" $GITHUB_EVENT_PATH)
 
 if [[ "$ACTION" != "closed" ]]; then
-    cho "This action only runs on pull_request.closed"
+    echo "This action only runs on pull_request.closed"
     echo "Found: $GITHUB_EVENT_NAME.$ACTION"
     exit 1
 fi
