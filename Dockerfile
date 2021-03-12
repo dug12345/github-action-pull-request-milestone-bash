@@ -1,6 +1,6 @@
-FROM ubuntu:latest
+FROM alpine
 
-RUN apt-get -y update && apt-get -y install jq curl bash
+RUN apk add --no-cache jq curl bash
 
 COPY entrypoint.sh /entrypoint.sh
 
