@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get jq curl bash
+RUN apt install jq curl bash
 
 COPY entrypoint.sh /entrypoint.sh
 
